@@ -40,15 +40,15 @@ export const MAIN_MENU: Menu[] = [
     ],
   },
   {
+    id: 'information',
+    label: '이용안내',
+    path: '/information',
+  },
+  {
     id: 'reservation',
     label: '예약하기',
     path: '/reservation',
     url: 'https://www.naver.com',
-  },
-  {
-    id: 'information',
-    label: '이용안내',
-    path: '/information',
   },
   {
     id: 'reviews',
