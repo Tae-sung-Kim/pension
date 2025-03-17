@@ -2,6 +2,7 @@ type Menu = {
   id: string;
   label: string;
   path: string;
+  url?: string;
   subMenu?: Menu[];
 };
 
@@ -14,7 +15,7 @@ export const MAIN_MENU: Menu[] = [
   {
     id: 'rooms',
     label: '객실소개',
-    path: '/rooms',
+    path: '/rooms/1', // default로 첫번째 객실
     subMenu: [
       {
         id: 'room1',
@@ -26,32 +27,39 @@ export const MAIN_MENU: Menu[] = [
         label: '객실2',
         path: '/rooms/2',
       },
+      {
+        id: 'room3',
+        label: '객실3',
+        path: '/rooms/3',
+      },
+      {
+        id: 'room4',
+        label: '객실4',
+        path: '/rooms/4',
+      },
     ],
   },
   {
     id: 'reservation',
-    label: '예약하러가기',
+    label: '예약하기',
     path: '/reservation',
+    url: 'https://www.naver.com',
   },
   {
-    id: 'directions',
-    label: '오시는길',
-    path: '/directions',
-  },
-  {
-    id: 'guide',
+    id: 'information',
     label: '이용안내',
-    path: '/guide',
+    path: '/information',
   },
   {
     id: 'reviews',
-    label: '후기보러가기',
+    label: '후기보기',
     path: '/reviews',
+    url: 'https://www.naver.com',
   },
   {
-    id: 'gallery',
-    label: '갤러리',
-    path: '/gallery',
+    id: 'location',
+    label: '오시는길',
+    path: '/location',
   },
   {
     id: 'faq',

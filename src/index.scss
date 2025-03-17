@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #f5f5f5;
+$background-color: #fafaf9;
+
+// 기본 바탕화면
+body,
+header,
+footer {
+  background-color: $background-color;
 }
-
-
 
 @layer base {
   :root {
@@ -63,8 +66,6 @@ body {
     --chart-5: 340 75% 55%;
   }
 }
-
-
 
 @layer base {
   * {
