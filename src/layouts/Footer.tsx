@@ -36,7 +36,8 @@ export default function Footer() {
 
           {/* 연락처 및 주소 */}
           <div className="text-center text-gray-600">
-            <p>문의: 123-456-7890</p>
+            <p>{`${import.meta.env.VITE_PENSION_NAME}`}</p>
+            <p>문의: {`${import.meta.env.VITE_PENSION_PHONE}`}</p>
             <p>주소: {`${import.meta.env.VITE_PENSION_ADDRESS}`}</p>
           </div>
 
