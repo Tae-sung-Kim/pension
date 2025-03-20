@@ -1,4 +1,5 @@
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 export default function Footer() {
   return (
@@ -29,14 +30,14 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="text-gray-700 hover:text-blue-400 transition-colors"
             >
-              <FaTwitter size={24} />
+              <FaXTwitter size={24} />
             </a>
           </div>
 
           {/* 연락처 및 주소 */}
           <div className="text-center text-gray-600">
             <p>문의: 123-456-7890</p>
-            <p>주소: 서울시 강남구 테헤란로 123</p>
+            <p>주소: {`${import.meta.env.VITE_PENSION_ADDRESS}`}</p>
           </div>
 
           {/* 저작권 정보 */}
