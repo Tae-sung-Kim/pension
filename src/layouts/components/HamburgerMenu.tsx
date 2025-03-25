@@ -42,7 +42,7 @@ export default function HamburgerMenu({ onClick }: MenuProps) {
                     <DropdownMenuPortal>
                       <DropdownMenuSubContent>
                         {d.subMenu.map((d2) => (
-                          <Link to={d2.path}>
+                          <Link to={d2.path} key={d2.id}>
                             <DropdownMenuItem>{d2.label}</DropdownMenuItem>
                           </Link>
                         ))}
