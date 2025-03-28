@@ -10,16 +10,17 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { MAIN_MENU } from '@/constants/menu';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Fragment } from 'react';
+import { Menu } from '@/types/menu';
 
 type MenuProps = {
   onClick: (url?: string) => void;
+  menuData: Menu[];
 };
 
-export default function HamburgerMenu({ onClick }: MenuProps) {
+export default function HamburgerMenu({ onClick, menuData }: MenuProps) {
   return (
     <div className="md:hidden">
       <DropdownMenu>
@@ -29,21 +30,23 @@ export default function HamburgerMenu({ onClick }: MenuProps) {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
-          {MAIN_MENU.map((d) => {
+          {menuData.map((d) => {
             return (
               <Fragment key={d.id}>
                 {d.url ? (
                   <DropdownMenuItem onClick={() => onClick(d.url)}>
-                    {d.label}
+                    {d.name}
                   </DropdownMenuItem>
                 ) : d.subMenu ? (
                   <DropdownMenuSub>
-                    <DropdownMenuSubTrigger>{d.label}</DropdownMenuSubTrigger>
+                    <DropdownMenuSubTrigger>
+                      <Link to={d.path}>{d.name}</Link>
+                    </DropdownMenuSubTrigger>
                     <DropdownMenuPortal>
                       <DropdownMenuSubContent>
                         {d.subMenu.map((d2) => (
                           <Link to={d2.path} key={d2.id}>
-                            <DropdownMenuItem>{d2.label}</DropdownMenuItem>
+                            <DropdownMenuItem>{d2.name}</DropdownMenuItem>
                           </Link>
                         ))}
                       </DropdownMenuSubContent>
@@ -51,7 +54,7 @@ export default function HamburgerMenu({ onClick }: MenuProps) {
                   </DropdownMenuSub>
                 ) : (
                   <Link to={d.path}>
-                    <DropdownMenuItem>{d.label}</DropdownMenuItem>
+                    <DropdownMenuItem>{d.name}</DropdownMenuItem>
                   </Link>
                 )}
               </Fragment>

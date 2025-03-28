@@ -1,0 +1,22 @@
+[
+  {
+    "id": "room1",
+    "description": "객실1",
+    "image": ["https://via.placeholder.com/150"]
+  },
+  {
+    "id": "room2",
+    "description": "객실2",
+    "image": ["https://via.placeholder.com/150"]
+  },
+  {
+    "id": "room3",
+    "description": "객실3",
+    "image": ["https://via.placeholder.com/150"]
+  },
+  {
+    "id": "room4",
+    "description": "객실4",
+    "image": ["https://via.placeholder.com/150"]
+  }
+]

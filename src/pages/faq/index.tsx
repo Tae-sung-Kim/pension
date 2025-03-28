@@ -1,3 +1,3 @@
-export default function Faq() {
+export default function FaqPage() {
   return <div>FAQ</div>;
 }

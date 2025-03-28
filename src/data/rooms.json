@@ -1,26 +1,22 @@
 [
   {
-    "id": "1",
+    "id": "room1",
     "name": "객실1",
-    "description": "객실1",
-    "image": "https://via.placeholder.com/150"
+    "thumbnail": "https://via.placeholder.com/150"
   },
   {
-    "id": "2",
+    "id": "room2",
     "name": "객실2",
-    "description": "객실3",
-    "image": "https://via.placeholder.com/150"
+    "thumbnail": "https://via.placeholder.com/150"
   },
   {
-    "id": "3",
+    "id": "room3",
     "name": "객실3",
-    "description": "객실3",
-    "image": "https://via.placeholder.com/150"
+    "thumbnail": "https://via.placeholder.com/150"
   },
   {
-    "id": "4",
+    "id": "room4",
     "name": "객실4",
-    "description": "객실4",
-    "image": "https://via.placeholder.com/150"
+    "thumbnail": "https://via.placeholder.com/150"
   }
 ]

@@ -1,6 +1,6 @@
 import useKakaoMap from '@/hooks/useKakaoMap';
 
-export default function Location() {
+export default function LocationPage() {
   useKakaoMap('map', {
     level: 2,
   });
