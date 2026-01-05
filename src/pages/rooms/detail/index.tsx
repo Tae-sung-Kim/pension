@@ -1,3 +1,6 @@
+import { useParams } from 'react-router-dom';
 export default function RoomsDetailPage() {
-  return <div>객실 상세</div>;
+  const { id } = useParams();
+  console.log(id);
+  return <div>객실 상세 - ID: {id}</div>;
 }
